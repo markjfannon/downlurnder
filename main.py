@@ -14,7 +14,8 @@ intents.members = True
 #Some basic setup
 token = os.getenv('TOKEN')
 save_path = os.getenv('SAVE_PATH')
-bot = commands.Bot(command_prefix='!', description="URN Downloader", intents=intents)
+prefix = os.getenv('PREFIX')
+bot = commands.Bot(command_prefix=prefix, description="URN Downloader", intents=intents, help_command=None)
 
 #Login status message
 @bot.event
@@ -30,6 +31,13 @@ async def d(ctx, *args):
     else:
         await ctx.send("No attachments have been provided")
 
+@bot.command()
+async def help(ctx):
+    embed=discord.Embed(title="DownlURNder Help", url="https://github.com/markjfannon/downlurnder",\
+         description="Use {}d alongside an MP3 attachment to use the download tool!".format(prefix), color=0x34BD19)
+    embed.add_field(name="Example Usage", value="{}d filename.mp3 filename".format(prefix))
+    embed.set_footer(text="DownlURNder: Making remote AP project submissions easy")
+    await ctx.send(embed=embed)
 #Actually runs the thing
 bot.run(token)
 
