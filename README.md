@@ -20,3 +20,4 @@ If the download is complete, a success message gets sent back.
 ## To do
 - Better logging!
 - Better help/debugging
+- Perhaps support for a wider range of formats
