@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-#Some basic setup
+#Some basic setup. Help command is disabled to allow custom one to work properly
 token = os.getenv('TOKEN')
 save_path = os.getenv('SAVE_PATH')
 prefix = os.getenv('PREFIX')
@@ -31,6 +31,7 @@ async def d(ctx, *args):
     else:
         await ctx.send("No attachments have been provided")
 
+#Help command w/ embed
 @bot.command()
 async def help(ctx):
     embed=discord.Embed(title="DownlURNder Help", url="https://github.com/markjfannon/downlurnder",\
@@ -38,6 +39,7 @@ async def help(ctx):
     embed.add_field(name="Example Usage", value="{}d filename.mp3 filename".format(prefix))
     embed.set_footer(text="DownlURNder: Making remote AP project submissions easy")
     await ctx.send(embed=embed)
+
 #Actually runs the thing
 bot.run(token)
 
