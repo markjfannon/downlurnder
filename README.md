@@ -5,7 +5,7 @@ Python-based Discord tool to allow downloading and automatic renaming of MP3 fil
 This was designed for [Univeristy Radio Nottingham (URN)](https://urn1350.net), hence the silly punny name. Allows ident tracks to be easily submitted via Discord and automatically saved into the correct directory for playout. It also allows renaming of these tracks, which is carried out by both renaming the file and the id3 metadata. 
 
 ## Setup
-Run `pip3 install -r requirements.txt
+Run `pip3 install -r requirements.txt`
 Run `python3 main.py`
 
 ## Operation
