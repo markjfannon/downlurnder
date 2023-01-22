@@ -6,6 +6,7 @@ This was designed for [Univeristy Radio Nottingham (URN)](https://urn1350.net), 
 
 ## Setup
 Run `pip3 install -r requirements.txt`
+
 Run `python3 main.py`
 
 ## Operation
