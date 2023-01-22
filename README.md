@@ -11,7 +11,7 @@ This was designed for [Univeristy Radio Nottingham (URN)](https://urn1350.net), 
 - discord + discord.ext
 
 ## Operation
-Bot token and save path info should be stored in a .env file and set to the user's needs. The command prefix is currently set in main.py and is `!` by default. 
+Bot token, prefix and save path info should be stored in a .env file and set to the user's needs.
 
 Only one command currently exists - the main download tool which is just called `d`. This should be called in a message containing attachments of .mp3 file type for it to work properly. If no other arguments are provided, the file(s) will be downloaded to the preset path and have the same name as the original file. If the user desires to **rename** the files, then alternative filenames can be provided in the order of the attachments. The download function has been created in such away that allows the alternative filenames to be provided with or without the .mp3 extension on the end - either way it'll save as a .mp3. If no attachments at all have been provided, a message will be sent back highlighting this. The same will happen if only non-mp3 attachments are given. 
 
